@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Urbinanet | Login</title>
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Iniciar Sesión</h1>
+    </header>
 
-<header>
-    <h1>Iniciar Sesión</h1>
-</header>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="contratar.html">Contratar</a>
+    </nav>
 
-<nav>
-    <a href="index.html">Inicio</a>
-    <a href="paquetes.html">Paquetes</a>
-    <a href="contratar.html">Contratar</a>
-</nav>
-
-<section>
-    <form action="../php/login.php" method="POST">
+    <section>
+      <form action="../php/login.php" method="POST">
         <label>Correo electrónico</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" required />
 
         <label>Contraseña</label>
-        <input type="password" name="password" required>
+        <input type="password" name="password" required />
 
         <button type="submit">Ingresar</button>
-    </form>
-</section>
+      </form>
+    </section>
 
-
-
-<script src="../js/main.js"></script>
-</body>
+    <script src="../js/main.js"></script>
+  </body>
 </html>

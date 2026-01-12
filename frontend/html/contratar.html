@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Urbinanet | Contratar</title>
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Contrata tu servicio</h1>
+    </header>
 
-<header>
-    <h1>Contrata tu servicio</h1>
-</header>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="login.html">Login</a>
+    </nav>
 
-<nav>
-    <a href="index.html">Inicio</a>
-    <a href="paquetes.html">Paquetes</a>
-    <a href="login.html">Login</a>
-</nav>
-
-<section>
-    <form action="../php/register.php" method="POST">
+    <section>
+      <form action="../php/register.php" method="POST">
         <label>Nombre completo</label>
-        <input type="text" name="nombre" required>
+        <input type="text" name="nombre" required />
 
         <label>Correo electrónico</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" required />
 
         <label>Dirección</label>
-        <input type="text" name="direccion" required>
+        <input type="text" name="direccion" required />
 
         <label>Paquete</label>
         <select name="paquete">
-            <option value="basico">Básico</option>
-            <option value="intermedio">Intermedio</option>
-            <option value="premium">Premium</option>
+          <option value="basico">Básico</option>
+          <option value="intermedio">Intermedio</option>
+          <option value="premium">Premium</option>
         </select>
 
         <button type="submit">Contratar</button>
-    </form>
-</section>
+      </form>
+    </section>
 
-<footer>
-    <p>Urbinanet conecta tu mundo</p>
-</footer>
+    <footer>
+      <p>Urbinanet conecta tu mundo</p>
+    </footer>
 
-<script src="../js/main.js"></script>
-</body>
+    <script src="../js/main.js"></script>
+  </body>
 </html>
