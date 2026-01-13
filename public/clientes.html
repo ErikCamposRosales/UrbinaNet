@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización de Clientes - Firebase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div>
+                    <h1><i class="fas fa-users"></i> Gestión de Clientes</h1>
+                    <p class="subtitle">Visualiza y administra la información de tus clientes (Firebase)</p>
+                </div>
+                <div class="firebase-info">
+                    <div class="client-count">
+                        <span id="total-clients">0</span> clientes registrados
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Buscar por nombre, ciudad, teléfono...">
+            </div>
+            <div class="filter-box">
+                <select id="filter-package">
+                    <option value="">Todos los paquetes</option>
+                    <option value="Básico">Básico</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Premium">Premium</option>
+                </select>
+                <select id="filter-city">
+                    <option value="">Todas las ciudades</option>
+                    <!-- Las opciones se cargarán dinámicamente -->
+                </select>
+                <button id="refresh-btn" class="refresh-btn">
+                    <i class="fas fa-sync-alt"></i> Actualizar
+                </button>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Cargando clientes desde Firestore...</p>
+        </div>
+        
+        <div class="firebase-status" id="firebase-status">
+            <i class="fas fa-database"></i>
+            <span>Conectado a Firebase Firestore</span>
+        </div>
+        
+        <div class="clients-container" id="clients-list">
+            <!-- Los clientes se cargarán aquí con JavaScript -->
+        </div>
+        
+        <div class="firebase-actions">
+            <button id="export-json" class="action-btn">
+                <i class="fas fa-download"></i> Exportar JSON
+            </button>
+            <button id="add-sample" class="action-btn" style="display: none;">
+                <i class="fas fa-plus"></i> Agregar Datos de Ejemplo
+            </button>
+        </div>
+        
+        <footer>
+            <p>Sistema de Gestión de Clientes &copy; <span id="current-year"></span></p>
+            <p><small>Alojado en Firebase Hosting - Base de datos Firestore</small></p>
+            <p class="firebase-link">
+                <a href="https://console.firebase.google.com/" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Administrar en Consola Firebase
+                </a>
+            </p>
+        </footer>
+    </div>
+    
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
