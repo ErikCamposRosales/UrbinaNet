@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Urbinanet | Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<header>
+    <h1>Urbinanet</h1>
+    <p>Internet rápido y confiable</p>
+</header>
+
+<nav>
+    <a href="#" class="nav-link active" data-section="inicio">
+        <i class="fas fa-home"></i> Inicio
+    </a>
+    <a href="#" class="nav-link" data-section="paquetes">
+        <i class="fas fa-box-open"></i> Paquetes
+    </a>
+    <a href="#" class="nav-link" data-section="contratar">
+        <i class="fas fa-file-contract"></i> Contratar
+    </a>
+    <!-- El enlace de Bitácora se agregará dinámicamente cuando el usuario sea admin -->
+    <a href="#" class="nav-link" data-section="login">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </a>
+</nav>
+
+<!-- Sección Inicio -->
+<section id="inicio" class="active">
+    <div class="info-empresa">
+        <div class="bloque">
+            <h2><i class="fas fa-info-circle"></i> ¿Quiénes somos?</h2>
+            <p>
+                Urbinanet es una empresa dedicada a brindar servicios de internet confiables y accesibles,
+                enfocada en mejorar la conectividad de hogares y negocios mediante soluciones tecnológicas modernas.
+            </p>
+        </div>
+
+        <div class="bloque">
+            <h2><i class="fas fa-bullseye"></i> Misión</h2>
+            <p>
+                Brindar servicios de internet rápidos, estables y accesibles, ofreciendo atención personalizada
+                y soluciones tecnológicas que contribuyan al desarrollo digital de nuestros clientes.
+            </p>
+        </div>
+
+        <div class="bloque">
+            <h2><i class="fas fa-eye"></i> Visión</h2>
+            <p>
+                Ser una empresa líder en servicios de internet a nivel regional, reconocida por su calidad,
+                innovación y compromiso con la satisfacción del cliente.
+            </p>
+        </div>
+
+        <div class="bloque">
+            <h2><i class="fas fa-star"></i> Valores</h2>
+            <ul>
+                <li><i class="fas fa-handshake"></i> Compromiso con el cliente</li>
+                <li><i class="fas fa-award"></i> Calidad en el servicio</li>
+                <li><i class="fas fa-user-check"></i> Responsabilidad</li>
+                <li><i class="fas fa-lightbulb"></i> Innovación</li>
+                <li><i class="fas fa-heart"></i> Honestidad</li>
+            </ul>
+        </div>
+
+        <div class="bloque">
+            <h2><i class="fas fa-wifi"></i> Nuestros servicios</h2>
+            <ul>
+                <li><i class="fas fa-home"></i> Internet residencial</li>
+                <li><i class="fas fa-cogs"></i> Planes accesibles y personalizados</li>
+                <li><i class="fas fa-bolt"></i> Instalación rápida</li>
+                <li><i class="fas fa-headset"></i> Soporte técnico confiable</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="conectar-section">
+        <h2><i class="fas fa-bolt"></i> Conéctate sin límites</h2>
+        <p>Ofrecemos el mejor servicio de internet para tu hogar y negocio.</p>
+        <img src="img/Diseño publicitario.png" alt="Promoción Urbinanet">
+    </div>
+</section>
+
+<!-- Sección Paquetes -->
+<section id="paquetes">
+    <h1 class="section-title"><i class="fas fa-boxes"></i> Nuestros Paquetes</h1>
+    
+    <div class="paquetes-container">
+        <div class="paquete">
+            <img src="img/paquete-basico.png" alt="paquete basico">
+            <h2><i class="fas fa-star"></i> Básico</h2>
+            <p class="speed-info">10 Mbps</p>
+            <p class="price-info">$300 MXN</p>
+        </div>
+        
+        <div class="paquete">
+            <img src="img/paquete-intermedio.png" alt="paquete intermedio">
+            <h2><i class="fas fa-star-half-alt"></i> Intermedio</h2>
+            <p class="speed-info">20 Mbps</p>
+            <p class="price-info">$400 MXN</p>
+        </div>
+
+        <div class="paquete">
+            <img src="img/paquete-premium.png" alt="paquete premium">
+            <h2><i class="fas fa-gem"></i> Premium</h2>
+            <p class="speed-info">40 Mbps</p>
+            <p class="price-info">$500 MXN</p>
+        </div>
+    </div>
+    
+    <p class="price-note">
+        <i class="fas fa-info-circle"></i> Precios sujetos a cambio. Instalación gratuita. Sin contratos forzosos.
+    </p>
+</section>
+
+<!-- Sección Contratar - MODIFICADA -->
+<section id="contratar">
+    <h1 class="section-title"><i class="fas fa-file-contract"></i> Contrata tu servicio</h1>
+    
+    <form id="contratar-form" onsubmit="enviarWhatsApp(event)">
+        <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+        
+        <label for="telefono"><i class="fas fa-phone"></i> Número de teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 524981234567">
+        
+        <label for="direccion"><i class="fas fa-map-marker-alt"></i> Domicilio completo</label>
+        <input type="text" id="direccion" name="direccion" required placeholder="Calle, número, colonia, ciudad">
+        
+        <label for="referencias"><i class="fas fa-map-signs"></i> Referencias del domicilio</label>
+        <textarea id="referencias" name="referencias" rows="3" required 
+                  placeholder="Color de casa, entre calles, puntos de referencia..."></textarea>
+        
+        <button type="submit">
+            <i class="fab fa-whatsapp"></i> Enviar solicitud por WhatsApp
+        </button>
+    </form>
+    
+    <div id="contratar-confirmacion" class="confirmation">
+        <i class="fab fa-whatsapp"></i>
+        ¡Solicitud enviada! Se abrirá WhatsApp para completar el proceso.
+    </div>
+</section>
+
+<!-- Sección Login -->
+<section id="login">
+    <h1 class="section-title"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</h1>
+    
+    <form class="login-form" id="login-form">
+        <label><i class="fas fa-envelope"></i> Correo electrónico</label>
+        <input type="email" name="email" required placeholder="usuario@urbinanet.com">
+        
+        <label><i class="fas fa-lock"></i> Contraseña</label>
+        <input type="password" name="password" required placeholder="Ingresa tu contraseña">
+        
+        <div class="form-options">
+            <label class="remember">
+                <input type="checkbox" name="remember">
+                <span>Recordar sesión</span>
+            </label>
+            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+        </div>
+        
+        <button type="submit">
+            <i class="fas fa-sign-in-alt"></i> Ingresar
+        </button>
+        
+        <div class="login-footer">
+            <p>¿No tienes cuenta? <a href="#" onclick="showSection('contratar'); return false;">Contrata tu servicio aquí</a></p>
+        </div>
+    </form>
+    
+    <div id="login-confirmacion" class="confirmation">
+        <!-- El contenido se llenará dinámicamente -->
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p><i class="fas fa-copyright"></i> 2026 Urbinanet - Internet rápido y confiable</p>
+        <div class="footer-links">
+            <a href="tel:5551234567"><i class="fas fa-phone"></i> Contacto: 671-108-3883</a>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
